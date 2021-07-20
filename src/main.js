@@ -21,6 +21,7 @@ const locationsOfEachMovie = document.querySelector("#locationsOfEachMovie")
 const secondView = document.querySelector("#secondView");
 const moviesInfoOnly = document.querySelector("#moviesInfoOnly");
 const thirdView = document.querySelector("#thirdView");
+const totalFilms = document.querySelector(".counter");
 
 //mostrar pelis en el orden de la data (second view)
 navMovies.addEventListener("click", () => {
@@ -38,6 +39,8 @@ navMovies.addEventListener("click", () => {
     resultAverage.style.display = "block";
     resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`;
     document.querySelector(".home").style.display = "flex";
+    totalFilms.style.display = "flex"
+    totalFilms.innerHTML = `Total Movies: ${data.films.length}`;
     thirdSlide();
     //agregado para que comience desde el inicio de la sgte pantalla
     startFromBeginning();
@@ -78,7 +81,7 @@ function thirdSlide() {
         //agregado para que comience desde el inicio de la sgte pantalla
         startFromBeginning();
         thirdView.style.display = "flex"
-        //moviesListComplete.style.display = "none"
+        //moviesListComplete.style.display = "none";
         const movieId = element.getAttribute("id")
         const movieInformation = compareIdMovie(filmsCopy, movieId)
         moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
@@ -128,6 +131,31 @@ function startFromBeginning() {
     behavior: 'smooth'
 });
 }
-//boton de inicio (home)
-document.querySelector(".home").addEventListener("click", () =>location.reload());
+
+
+//IGNORAR ESTO POR AHORA
+const arrDirectors = data.films.map(array => array.director);
+const directorUnique = Array.from(new Set(arrDirectors));
+console.log(directorUnique);
+
+document.querySelector("#getDirectors").innerHTML = `${directorUnique.map(elem => {
+    return `<option>${elem}</option>`
+})}`
+
+const arrProducers = data.films.map(array => array.producer);
+const producerUnique = arrProducers.filter((producer, index) => {
+    return arrProducers.indexOf(producer) === index;
+    }
+)
+console.log(producerUnique);
+
+// console.log(Array.prototype);
+
+
+
+
+
+
+
+
 

@@ -283,6 +283,19 @@
   cursor: pointer;
 }
 
+.counter{
+  display:none;
+  background-color: antiquewhite;
+  width: 84%;
+  justify-content: center;
+  position: fixed;
+  padding: 10px 0;
+  position: absolute;
+  right: 8%;
+  z-index: 1;
+  font-size: 200%;
+}
+
 .dropbtn{
   background-color:rgb(235, 187, 17);
   color: white;
