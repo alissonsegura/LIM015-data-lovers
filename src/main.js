@@ -98,25 +98,25 @@ function thirdSlide() {
             divsAboutVehicles.innerHTML += getVehiclesResult[i]
         }
         //movieId es el Id de la peli seleccionada
-        console.log(movieId)
+        movieId;
         //atrapando todos los divs de topics como personajes, vehiculos
         const getElementTopic = document.querySelectorAll(".divTopic");
         //al hacer click en el div con la clase divTopic
         getElementTopic.forEach(element => element.addEventListener("click", () => {
             //dataId es el Id del div de personaje
             const dataId = element.dataset.id;
-            console.log(dataId);
+            dataId;
             /*1.mostrar la funcion filterPeople*/
             const getTopicPeople = filterPeople(filmsCopy, movieId, dataId);
-            console.log(getTopicPeople);
-            console.log(personalizedInfoOnTopic);
+            getTopicPeople;
+            personalizedInfoOnTopic;
             getTopicPeople.forEach(e =>
                 personalizedInfoOnTopic.innerHTML = e
             )
             /*3.mostrar la funcion filterVehicle*/
             const getTopicVehicle = filterVehicle(filmsCopy, movieId, dataId);
-            console.log(getTopicVehicle);
-            console.log(getTopicVehicle.length);
+            getTopicVehicle;
+            getTopicVehicle.length;
             getTopicVehicle.forEach(e =>
                 personalizedInfoOnTopic.innerHTML = e
             )
@@ -136,29 +136,28 @@ function startFromBeginning() {
 
 
 
-//IGNORAR ESTO POR AHORA
-const arrDirectors = data.films.map(array => array.director);
-const directorUnique = Array.from(new Set(arrDirectors));
-console.log(directorUnique);
+// //IGNORAR ESTO POR AHORA
+// const arrDirectors = data.films.map(array => array.director);
+// const directorUnique = Array.from(new Set(arrDirectors));
+// console.log(directorUnique);
 
-document.querySelector("#getDirectors").innerHTML = `${directorUnique.map(elem => {
-    return `<option>${elem}</option>`
-})}`
+// document.querySelector("#getDirectors").innerHTML = `${directorUnique.map(elem => {
+//     return `<option>${elem}</option>`
+// })}`
 
-const arrProducers = data.films.map(array => array.producer);
-const producerUnique = arrProducers.filter((producer, index) => {
-    return arrProducers.indexOf(producer) === index;
-    }
-)
-console.log(producerUnique);
-document.querySelector("#getProducers").innerHTML = `${producerUnique.map(elem => {
-    return `<option>${elem}</option>`
-})}`
-// console.log(Array.prototype);
+// const arrProducers = data.films.map(array => array.producer);
+// const producerUnique = arrProducers.filter((producer, index) => {
+//     return arrProducers.indexOf(producer) === index;
+//     }
+// )
+// console.log(producerUnique);
+// document.querySelector("#getProducers").innerHTML = `${producerUnique.map(elem => {
+//     return `<option>${elem}</option>`
+// })}`
+// // console.log(Array.prototype);
 
 
-console.log(setMoviesTitle(data.films))
-
+// console.log(setMoviesTitle(data.films))
 
 
 

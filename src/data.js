@@ -1,4 +1,3 @@
-import data from './data/ghibli/ghibli.js';
 //extraer la imagen y el titulo dentro de un div
 export const setMoviesTitle = element => {
   return element.map(
@@ -50,12 +49,12 @@ export const getAverage = (arr) => {
   }, 0)
   return sum / arr.length
 }
-// Funcion para obtener  todos los personajes y sus nombres - observado
-export const charactersName = data.films.map(film => {
-  return film.people.map(character => {
-    return character.name
-  })
-});
+// // Funcion para obtener  todos los personajes y sus nombres - observado
+// export const charactersName = data.films.map(film => {
+//   return film.people.map(character => {
+//     return character.name
+//   })
+// });
 //Funcion inputSearch
 export const onSearch = (arr, search) => {
   return arr.filter(el => {
@@ -66,12 +65,12 @@ export const onSearch = (arr, search) => {
     }
   })
 }
-// Funcion para obtener las locaciones y sus descripciones - observado
-export const locationName = data.films.map(element => {
-  return element.locations.map(e => {
-    return e.name
-  })
-});
+// // Funcion para obtener las locaciones y sus descripciones - observado
+// export const locationName = data.films.map(element => {
+//   return element.locations.map(e => {
+//     return e.name
+//   })
+// });
 //extraer informacion que corresponda al id de la pelicula
 export const compareIdMovie = (arr, idvalue) => {
   return arr.filter(element => {
