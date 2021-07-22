@@ -157,7 +157,7 @@ document.querySelector("#getProducers").innerHTML = `${producerUnique.map(elem =
 // console.log(Array.prototype);
 
 
-
+console.log(setMoviesTitle(data.films))
 
 
 
