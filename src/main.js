@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js'
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, showLocationsInformation, getPeople, getVehicles, filterPeople, filterVehicle } from "./data.js";
+import { alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, getLocationsFromMovie } from "./data.js";
 
 const navMovies = document.querySelector("#filmsimage");
 const movieList = document.querySelector("#movieList");
@@ -131,35 +131,108 @@ function startFromBeginning() {
         behavior: 'smooth'
     });
 }
+//TRAER FUNCIONES CON MANEJO DEL DOM:
+//extraer la imagen y el titulo dentro de un div
+const setMoviesTitle = element => {
+  return element.map(
+    (el) => {
+      const movieCover = `<div class="movieItem" id="${el.id}"><img src="${el.poster}" alt = "portada de pelicula"/>`;
+      const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
+      return movieCover + moviesTitle
+    }
+  )
+}
+//obtener descripcion segun id de pelicula
+const descriptionMovie = (arr) => {
+  return `<section class="moviesInfo" id="moviesInfo">
+    <div class="movieInformation" id="movieInformation">
+    <div class="titlemovie">
+    <h2 class="titles">${arr[0].title}</h2></div> 
+    </div>
+
+    <div class="movieimage">
+    <img class="poster"src="${arr[0].poster}" alt="Ghibli's movie information"/>
+    </div>
+
+    <div class="moviedescription">
+    <h1 class="sipnosistitle">Sipnosis</h1>
+    <p class="descriptionmovie"><br/>${arr[0].description}</p>
+    </div>
+
+    <div class="moviedirector">
+    <p><br><strong>Director:${arr[0].director}</strong></p>
+    </div>
+
+    <div class="movieproducer">
+    <p><strong>Producer:${arr[0].producer}</strong></p>
+    </div>
+
+  </div>
+  </section>`
+}
+//show image+name location 
+const showLocationsInformation = (movies) => {
+  let locationInformation = '';
+  const locations = getLocationsFromMovie(movies);
+  locations.forEach((location) => {
+    locationInformation += `<section class="movielocation" >
+    <div class="locationimage">
+    <img class="character" src="${location.img}" alt="Ghibli's locations images"/>
+    </div>
+    
+    <div class="locationName">
+    <h1 class="locationname">${location.name}</h1>
+    </div>
+    </section>`
+  })
+  return locationInformation;
+
+}
+
+//extraer el nombre e imagen de los personajes (todos, sin excepcion)
+const getPeople = arr => {
+  return arr.map(e => e.people.map(el => {
+    const peopleInfo = `<div class="divTopic" data-id="${el.id}">
+    <img class="character" src="${el.img}" alt="character"/>
+    <h3 class ="namecharacter">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3>
+    </div>`;
+    return peopleInfo;
+  }));
+}
 
 
+//extraer el nombre e imagen de los vehiculos
+const getVehicles = arr => {
+  return arr.map(e => e.vehicles.map(el => {
+    const vehicleImg = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="vehicle"/>`;
+    const vehicleName = `<h3 class="namevehicle">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    return vehicleImg + vehicleName
+  }));
+}
+//obtener la info de un personaje por su id
+const filterPeople = (filmsCopy, idMovie, idPeople) => {
+  return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.people)[0].filter(el => el.id === idPeople).map(el => {
+    return `<div class="myModal"><span class="close">&times;</span><h3>Character Name:
+      ${el.name}</h3>
+      <img src="${el.img}" />
+      <p>GENDER: ${el.gender}</p>
+      <p>AGE: ${el.age}</p>
+      <p>EYE COLOR: ${el.eye_color}</p>
+      <p>HAIR COLOR: ${el.hair_color}</p>
+      <p>SPECIE: ${el.specie}</p></div>`
+  }
+  )
+}
 
-
-
-// //IGNORAR ESTO POR AHORA
-// const arrDirectors = data.films.map(array => array.director);
-// const directorUnique = Array.from(new Set(arrDirectors));
-// console.log(directorUnique);
-
-// document.querySelector("#getDirectors").innerHTML = `${directorUnique.map(elem => {
-//     return `<option>${elem}</option>`
-// })}`
-
-// const arrProducers = data.films.map(array => array.producer);
-// const producerUnique = arrProducers.filter((producer, index) => {
-//     return arrProducers.indexOf(producer) === index;
-//     }
-// )
-// console.log(producerUnique);
-// document.querySelector("#getProducers").innerHTML = `${producerUnique.map(elem => {
-//     return `<option>${elem}</option>`
-// })}`
-// // console.log(Array.prototype);
-
-
-// console.log(setMoviesTitle(data.films))
-
-
-
-
-
+//obtener la info del vehiculo por su id
+const filterVehicle = (filmsCopy, idMovie, idPeople) => {
+  return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.vehicles)[0].filter(el => el.id === idPeople).map(el => {
+    return `<div class="myModal"><span class="close">&times;</span><h3>VEHICLE NAME: ${el.name}</h3>
+      <img src="${el.img}" />
+      <p>DESCRIPTION: ${el.description}</p>
+      <p>VEHICLE CLASS: ${el.vehicle_class}</p>
+      <p>VEHICLE LENGTH: ${el.length}</p>
+      <p>PILOT: ${el.pilot.name}</p></div>`
+  }
+  )
+}
