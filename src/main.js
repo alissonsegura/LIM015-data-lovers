@@ -21,6 +21,7 @@ const secondView = document.querySelector("#secondView");
 const moviesInfoOnly = document.querySelector("#moviesInfoOnly");
 const thirdView = document.querySelector("#thirdView");
 const totalFilms = document.querySelector(".counter");
+const refresh = document.querySelector(".home");
 
 //mostrar pelis en el orden de la data (second view)
 navMovies.addEventListener("click", () => {
@@ -37,7 +38,7 @@ navMovies.addEventListener("click", () => {
     movieList.innerHTML = setMoviesTitle(data.films).join("");
     resultAverage.style.display = "block";
     resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`;
-    document.querySelector(".home").style.display = "flex";
+    refresh.style.display = "flex";
     totalFilms.style.display = "flex";
     totalFilms.innerHTML = `Total Movies: ${data.films.length}`;
     thirdSlide();
@@ -136,7 +137,7 @@ function startFromBeginning() {
     });
 }
 //refrescar pagina
-document.querySelector(".home").addEventListener("click", () => location.reload());
+refresh.addEventListener("click", () => location.reload());
 //TRAER FUNCIONES CON MANEJO DEL DOM:
 //extraer la imagen y el titulo dentro de un div
 const setMoviesTitle = element => {
