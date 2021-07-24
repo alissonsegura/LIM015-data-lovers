@@ -110,16 +110,24 @@ function thirdSlide() {
             const getTopicPeople = filterPeople(filmsCopy, movieId, dataId);
             getTopicPeople;
             personalizedInfoOnTopic;
-            getTopicPeople.forEach(e =>
-                personalizedInfoOnTopic.innerHTML = e
-            )
+          getTopicPeople.forEach(e => {
+            personalizedInfoOnTopic.innerHTML = e;
+            personalizedInfoOnTopic.classList.remove("hidden");
+          }
+          );
+            /*3.mostrar la funcion locaciones*/
             /*3.mostrar la funcion filterVehicle*/
             const getTopicVehicle = filterVehicle(filmsCopy, movieId, dataId);
             getTopicVehicle;
             getTopicVehicle.length;
-            getTopicVehicle.forEach(e =>
-                personalizedInfoOnTopic.innerHTML = e
-            )
+          getTopicVehicle.forEach(e => {
+            personalizedInfoOnTopic.innerHTML = e;
+            personalizedInfoOnTopic.classList.remove("hidden");
+            }
+          );
+          document.querySelector(".close").addEventListener("click", () => {
+            personalizedInfoOnTopic.classList.add("hidden");
+          });
         }))
     }))
 }

@@ -24,7 +24,7 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
     it('alphabeticOrder is a function', () => {
       expect(typeof alphabeticOrder).toBe('function');
     });
-    it('Ordena desde A a Z', () => {
+    it('alphabeticOrder Ordena desde A a Z', () => {
       const sortedByTitleAscendant = [{
         "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
         "title": "Castle in the Sky",
@@ -46,10 +46,10 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
       ];
       expect(alphabeticOrder(data)).toEqual(sortedByTitleAscendant);
     });
-    it('alphabeticOrder is a function', () => {
+    it('alphabeticOrderLess is a function', () => {
       expect(typeof alphabeticOrderLess).toBe('function');
     });
-    it('Ordena desde la Z a la A', () => {
+    it('alphabeticOrderLess Ordena desde la Z a la A', () => {
       const sortedByTitledescendant = [{
         "id": "90b72513-afd4-4570-84de-a56c312fdf81",
         "title": "The Cat Returns",
@@ -74,7 +74,7 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
     it('ratingScoreLess is a function', () => {
       expect(typeof ratingScoreLess).toBe('function');
     });
-    it('Ordena desde menor a mayor rating', () => {
+    it('ratingScoreLess Ordena desde menor a mayor rating', () => {
       const sortedByRatingAscendant = [
         {
           "id": "90b72513-afd4-4570-84de-a56c312fdf81",
@@ -100,7 +100,7 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
     it('ratingScore is a function', () => {
       expect(typeof ratingScore).toBe('function');
     });
-    it('Ordena desde mayor a menor rating', () => {
+    it('ratingScore Ordena desde mayor a menor rating', () => {
       const sortedByRatingDescendant = [
         {
           "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
@@ -126,7 +126,7 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
     it('realeaseDateOld is a function', () => {
       expect(typeof realeaseDateOld).toBe('function');
     });
-    it('Ordena desde menor a mayor release date', () => {
+    it('realeaseDateOld Ordena desde menor a mayor release date', () => {
       const sortedByReleaseAscendant = [
         {
           "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -152,7 +152,7 @@ import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, rea
     it('lastestRealeaseDate is a function', () => {
       expect(typeof lastestRealeaseDate).toBe('function');
     });
-    it('Ordena desde mayor a menor release date', () => {
+    it('lastestRealeaseDate Ordena desde mayor a menor release date', () => {
       const sortedByReleaseDescendant = [
         {
           "id": "90b72513-afd4-4570-84de-a56c312fdf81",
