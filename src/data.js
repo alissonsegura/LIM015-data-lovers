@@ -56,31 +56,3 @@ export const compareIdMovie = (arr, idvalue) => {
     return element.id === idvalue
   })
 };
-
-// get img + name in a array object
-export const getLocationsFromMovie = (movies) => {
-  let locations = [];
-  movies.forEach(movie => movie.locations.forEach(location => {
-    locations.push({
-      img: location.img,
-      name: location.name
-    })
-  }))
-  return locations;
-}
-
-
-
-///NO AGREGAR A GITHUB
-//function reduce
-export const acumulator = (initial, next) => initial + next;
-//funcion para buscar directores
-export const searchFilters = (input, arr) => {
-  document.addEventListener("keyup", e => {
-    if (e.target.includes(input)) {
-      document.querySelectorAll(arr).forEach(el => 
-        el.director.toLowerCase().includes(e.target.value)
-      )
-    }
-  })
-}
