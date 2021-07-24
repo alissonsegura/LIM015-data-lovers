@@ -135,6 +135,8 @@ function startFromBeginning() {
         behavior: 'smooth'
     });
 }
+//refrescar pagina
+document.querySelector(".home").addEventListener("click", () => location.reload());
 //TRAER FUNCIONES CON MANEJO DEL DOM:
 //extraer la imagen y el titulo dentro de un div
 const setMoviesTitle = element => {
