@@ -72,15 +72,15 @@ _Durante 5 sprints tratamos de priorizar ciertas historias de usuario_
 
 | PROTOTIPO DE BAJA FIDELIDAD | PROTOTIPO DE BAJA FIDELIDAD |
 | ------------ | ------------- |
-| ![Image 1](./images/bajaFidel1.jpeg) | ![Image 1](./images/bajaFidel2.jpeg)|
+| ![Image 1](./bajaFidel1.jpeg) | ![Image 1](./bajaFidel2.jpeg)|
 
 | PROTOTIPO DE ALTA FIDELIDAD | 
 | ------------ |
-| ![Image 1](./images/altaFidel.jpeg) |
+| ![Image 1](./altaFidel.jpeg) |
 
 * __*Producto final:*__  
 [gh-pages](https://alissonsegura.github.io/LIM015-data-lovers/src/)
-[![Watch the video](./images/finaProject.jpeg)](https://youtu.be/u7rOeCec9VM)
+[![Watch the video](./finaProject.jpeg)](https://youtu.be/u7rOeCec9VM)
 
 
 ### Links relacionados
