@@ -1,15 +1,13 @@
 # Data Lovers
 ## INDICE
-* [1. Preámbulo](#studio-ghibli-world)
-* [2. Resumen del proyecto](#resumen-del-proyecto)
+* [1. Preámbulo](#studio-ghibli-world-🎬🍿)
+* [2. Resumen del proyecto](#resumen-del-proyecto-🗂️)
 * [3. Objetivos de aprendizaje](#objetivos-de-aprendizaje-🔧)
 * [4. Planning](#planning-sprints-📋)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
-***
+* [5. Imagenes](#imagenes-🚀)
+* [6. Links relacionados](#links-relacionados)
+* [7. Autores](#autores-✒️)
+*** 
 ## STUDIO GHIBLI WORLD 🎬🍿
 Inspirado en el mundo del **Studio Ghibli**, hemos desarrollado una página donde el usuario pueda encontrar las 20 peliculas mas aclamadas incluyendo información detallada sobre personajes, locaciones, vehiculos y caracteristicas, ademas de proporcionar herramientas para que los usuarios puedan tener acceso a las paginas oficiales y plataformas de streaming.
 
@@ -46,7 +44,7 @@ __JAVASCRIPT__
 - [x] Diferenciar entre tipos de datos atómicos y estructurados.
 
 __TESTING__
-- [x]Testeo unitario.
+- [x] Testeo unitario.
 
 __ESTRCTURA DEL CODIGO, GUIA DE ESTILO__
 - [x] Organizar y dividir el código en módulos (Modularización).
