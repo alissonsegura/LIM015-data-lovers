@@ -18,45 +18,45 @@ Este proyecto esta basado en la manipulación de data proporcionada por el equip
 
 ### Objetivos de aprendizaje 🔧
 __UX__
-- [ x ] UX (Diseñar la aplicación pensando y entendiendo al usuario.)
-- [ x ] UX [Crear prototipos para obtener feedback e iterar.]
-- [ x ] UX [Aplicar los principios de diseño visual (contraste, alineación, jerarquía).]
-- [ x ] UX [Planear y ejecutar tests de usabilidad.]
+- [x] Diseñar la aplicación pensando y entendiendo al usuario.
+- [x] Crear prototipos para obtener feedback e iterar.
+- [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
+- [x] Planear y ejecutar tests de usabilidad.
 
 __HTML/CSS__
-- [ x ] HTML, CSS [Uso de HTML semántico.]
-- [ x ] HTML, CSS [Uso de selectores de CSS.]
-- [ x ] HTML, CSS [Construir tu aplicación respetando el diseño realizado (maquetación).]
-- [ x ] HTML, CSS [Uso de flexbox en CSS.]
+- [x] Uso de HTML semántico.
+- [x] Uso de selectores de CSS.
+- [x] Construir tu aplicación respetando el diseño realizado (maquetación).
+- [x] Uso de flexbox en CSS.
 
 __DOM__
-- [ x ] DOM [Uso de selectores del DOM.]
-- [ x ] DOM [Manejo de eventos del DOM.]
-- [ x ] DOM [Manipulación dinámica del DOM (appendChild |createElement | createTextNode| innerHTML | textContent | etc.).]
+- [x] Uso de selectores del DOM.
+- [x] Manejo de eventos del DOM.
+- [x] Manipulación dinámica del DOM (appendChild, createElement, createTextNode, innerHTML,  textContent, etc.).
 
 __JAVASCRIPT__
-- [ x ] Javascript [Uso de condicionales (if-else | switch | operador ternario).]
-- [ x ] Javascript [Uso de bucles (for | for..in | for..of | while).]
-- [ x ] Javascript [Uso de funciones (parámetros | argumentos | valor de retorno).]
-- [ x ] Javascript [Declaración correcta de variables (const & let).]
-- [ x ] Javascript [Manipular arrays (filter | map | sort | reduce).]
-- [ ] Javascript [Manipular objects (key | value).]
-- [ x ] Javascript [Uso de ES Modules (import | export).]
-- [ x ] Javascript [Diferenciar entre expression y statements.]
-- [ x ] Javascript [Diferenciar entre tipos de datos atómicos y estructurados.]
+- [x] Uso de condicionales (if-else, switch, operador ternario).
+- [x] Uso de bucles (for, for..in, for..of, while).
+- [x] Uso de funciones (parámetros, argumentos, valor de retorno).
+- [x] Declaración correcta de variables (const & let).
+- [x] Manipular arrays (filter, map, sort, reduce).
+- [ ] Manipular objects (key, value).
+- [x] Uso de ES Modules (import, export).
+- [x] Diferenciar entre expression y statements.
+- [x] Diferenciar entre tipos de datos atómicos y estructurados.
 
 __TESTING__
-- [ x ]Testing [Testeo unitario.]
+- [x]Testeo unitario.
 
 __ESTRCTURA DEL CODIGO, GUIA DE ESTILO__
-- [ x ] Estrutura do código [Organizar y dividir el código en módulos (Modularización).]
-- [ x ] Guia de estilo [Uso de identificadores descriptivos (Nomenclatura | Semántica).]
-- [ x ] Guia de estilo [Uso de linter (ESLINT).]
+- [x] Organizar y dividir el código en módulos (Modularización).
+- [x] Uso de identificadores descriptivos (Nomenclatura, Semántica).
+- [x] Uso de linter (ESLINT).
 
 __GIT, GITHUB__
-- [ x ] Git, GitHub [Uso de comandos de git (add | commit | pull | status | push).]
-- [ x ] Git, GitHub [Manejo de repositorios de GitHub (clone | fork | gh-pages).]
-- [ x ] GitHub [Colaboración en Github (branches | pull requests | |tags).]
+- [x] Uso de comandos de git (add, commit, pull, status, push).
+- [x] Manejo de repositorios de GitHub (clone, fork, gh-pages).
+- [x] Colaboración en Github (branches, pull requests, tags).
 
 
 ## Planning sprints 📋

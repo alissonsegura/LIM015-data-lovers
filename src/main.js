@@ -47,8 +47,8 @@ navMovies.addEventListener("click", () => {
 })
 //ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", () => {
-    dropDown.classList.toggle("show")
-})
+  dropDown.classList.toggle("show");
+});
 //reemplazar con los filtros el orden de las pelis
 dropDown.addEventListener("change",
   (e) => {
