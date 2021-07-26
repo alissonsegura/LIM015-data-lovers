@@ -1,4 +1,4 @@
-import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, getAverage, realeaseDateOld, lastestRealeaseDate } from '../src/data.js';
+import { alphabeticOrder, alphabeticOrderLess, ratingScoreLess, ratingScore, getAverage, realeaseDateOld, lastestRealeaseDate, onSearch, compareIdMovie } from '../src/data.js';
 
 const data = [{
   "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
@@ -218,3 +218,33 @@ describe('ordena el realease date mas reciente a antiguo', () => {
   });
 });
 //end of release date
+
+describe('coincidencia del buscador', () => {
+  it('onSearch is a function', () => {
+    expect(typeof onSearch).toBe('function');
+  })
+  it('filtro de busqueda verdadero', () => {
+    expect(onSearch(data, "castle")).toBeTruthy();
+  })
+  it('filtro de busqueda no verdadero', () => {
+    expect(onSearch(data, "Fireflies")).not.toBeFalsy();
+  });
+});
+// end of function input search
+describe('extraer id de pelicula', () => {
+  it('compareIdMovie is a function', () => {
+    expect(typeof compareIdMovie).toBe('function');
+  });
+  it('la pelicula debe devolver id', () => {
+    const singleFilm = [
+      {
+        "id": "90b72513-afd4-4570-84de-a56c312fdf81",
+        "title": "The Cat Returns",
+        "rt_score": "89",
+        "release_date": "2002",
+      }
+    ];
+    expect(compareIdMovie(data, "90b72513-afd4-4570-84de-a56c312fdf81")).toEqual(singleFilm);
+  });
+});
+//end of id of films
